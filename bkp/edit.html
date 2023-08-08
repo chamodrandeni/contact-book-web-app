@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Contacts</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+
+    <style>
+        form{
+            width: 500px;
+        }
+        .in1{
+            background: #cac6c6;
+            border: 1px solid #ccc;
+            padding: 5px 1%;
+            font-size: 1.1em;
+            font-family: 'Open Sans', sans-serif;
+            width: 65%;
+        }
+        .in2{
+            width: 49%;
+            float: left;
+            background: #f3b918;
+            padding: 10px 0;
+            margin: 0 .5%;
+            border: none;
+            font-size: 1.1em;
+            font-family: 'Open Sans', sans-serif;
+            color: #000;
+            box-shadow: 0 0 3px #000;
+        }
+        .in2:hover{
+            background: #f27609;
+        }
+        .row{
+            width: 100%;
+            float: left;
+            margin-bottom: 5px;
+        }
+        .item{
+            width: 30%;
+            float: left;
+            font-size: 1.1em;
+        }
+        .gender{
+            background: #cac6c6;
+            width: 31.5%;
+            padding: 5px .5%;
+            float: left;
+            margin: 0 .5%;
+            border: 1px solid #ccc;
+        }
+        select{
+            background: #cac6c6;
+            width: 67.2%;
+            padding: 5px 0;
+            font-size: 1em;
+            font-family: 'Open Sans', sans-serif;
+        }
+        #msg{
+            display: none;
+            padding: 5px 10px;
+            margin: 10px;
+            min-height: 30px;
+            text-align: center;
+        }
+        .err{
+            background: #d11919;
+            color: #fff;
+
+        }
+
+        /* Media Query */
+
+        @media screen and (max-width:800px){
+            form{
+                width: 100%;
+            }
+        }
+        @media screen and (max-width:440px){
+            .in1{
+                width: 98%;
+            }
+            .item{
+                width: 100%;
+            }
+            .gender{
+                width: 100%;
+                margin: 5px 0;
+            }
+            select{
+                width: 100%;
+            }
+            .row{
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="welcome">
+            <span id="uname">Hi, User1</span>
+            <a href="login.html"><img src="icons/logout.svg" alt="LOGOUT" id="logout"></a>
+        </div>
+        <h1>Contact Book <span id="pgname">- Edit Contacts</span></h1>
+    </header>
+    <nav id="menu">
+        <a href="index.html" class="menu">
+            <img src="icons/home-yellow.svg" alt="Home" class="menuimg">
+            <span class="menutext">Home</span>
+        </a>
+        <a href="add.html" class="menu">
+            <img src="icons/add-yellow.svg" alt="Home" class="menuimg">
+            <span class="menutext">Add New</span>
+        </a>
+        <a href="all.html" class="menu">
+            <img src="icons/search-yellow.svg" alt="Home" class="menuimg">
+            <span class="menutext">Show All</span>
+        </a>
+        <a href="settings.html" class="menu">
+            <img src="icons/settings-yellow.svg" alt="Home" class="menuimg">
+            <span class="menutext">Settings</span>
+        </a>
+        <a href="login.html" class="menu">
+            <img src="icons/logout-yellow.svg" alt="Home" class="menuimg">
+            <span class="menutext">Logout</span>
+        </a>
+    </nav>
+    <main>
+        <div id="msg" class="err"></div>
+        <form onsubmit="return validate()" name="form1" method="post">
+            <label class="row">
+                <span class="item">Name</span>
+                <input type="text" class="in1" maxlength="30" value="Ananda Kumara Karunanayake" name="uname">
+            </label>
+            <label class="row">
+                <span class="item">Nickname</span>
+                <input type="text" class="in1" maxlength="12" value="Karu">
+            </label>
+            <label class="row">
+                <span class="item">Email</span>
+                <input type="email" class="in1" maxlength="100" value="abc123@gmail.com" name="email">
+            </label>
+            <label class="row">
+                <span class="item">Mobile No 1</span>
+                <input type="text" class="in1" maxlength="12" value="0714587896" name="mob1">
+            </label>
+            <label class="row">
+                <span class="item">Mobile No 2</span>
+                <input type="text" class="in1" maxlength="12" value="0762547896" name="mob2">
+            </label>
+            <label class="row">
+                <span class="item">Land No</span>
+                <input type="text" class="in1" maxlength="12" value="0112547896" name="land">
+            </label>
+            <label class="row">
+                <span class="item">Address</span>
+                <textarea maxlength="160" class="in1">No 123/A, Colombo rd, Gampaha</textarea>
+            </label>
+            <label class="row">
+                <span class="item">Contact type</span>
+                <select>
+                    <option>Friend</option>
+                    <option>Relation</option>
+                    <option selected>Co-Worker</option>
+                    <option>Other</option>
+                </select>
+            </label>
+            <div class="row">
+                <span class="item">Gender</span>
+                <label class="gender">Male<input type="radio" name="gender" checked></label>
+                <label class="gender">Female<input type="radio" name="gender"></label>
+            </div>
+            <label class="row">
+                <span class="item">Note</span>
+                <textarea maxlength="160" class="in1">Something...</textarea>
+            </label>
+            <div class="row">
+                <input type="submit" value="Edit Contact" class="in2">
+                <input type="reset" value="Cancel" class="in2">
+            </div>
+        </form>
+    </main>
+    <script src="validate.js"></script>
+</body>
+</html>

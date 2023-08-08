@@ -1,0 +1,77 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* Home page styles */
+        .box{
+            background: #fff;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            color: #000;
+            display: block;
+            border: 5px solid #F38918;
+            padding: 20px;
+            text-decoration: none;
+            border-radius: 100px;
+            margin: 50px 20px 0;
+        }
+        .box:hover{
+            background: #F27609;
+        }
+        .item{
+            display: block;
+            text-transform: uppercase;
+            padding-top: 10px;
+            font-weight: bold;
+        }
+        .imgs{
+            width: 50px;
+        }
+        main{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+ </head>
+ <body>
+    <header>
+        <div id="welcome">
+            <span id="uname">Hi, User1</span>
+            <a href="login.html"><img src="icons/logout.svg" alt="LOGOUT" id="logout"></a>
+        </div>
+        <h1>Contact Book <span id="pgname">- Home</span></h1>
+    </header>
+    <main>
+        <a href="all.html" class="box">
+            <img src="icons/search.svg" alt="Show" class="imgs">
+            <span class="item">Show All</span>
+        </a>
+        <a href="add.html" class="box">
+            <img src="icons/add.svg" alt="Add" class="imgs">
+            <span class="item">Add New</span>
+        </a>
+        <a href="settings.html" class="box">
+            <img src="icons/settings.svg" alt="Settings" class="imgs">
+            <span class="item">Settings</span>
+        </a>
+        <a href="login.html" class="box">
+            <img src="icons/logout.svg" alt="Logout" class="imgs">
+            <span class="item">Logout</span>
+        </a>
+    </main>
+ </body>
+ </html>

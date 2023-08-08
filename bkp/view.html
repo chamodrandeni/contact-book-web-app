@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Contact</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+
+    <style>
+        #wrap{
+            width: 500px;
+        }
+        .row{
+            width: 100%;
+            font-size: 1.1em;
+            padding: 5px;
+            float: left;
+        }
+        .item1{
+            width: 30%;
+            background: #eee;
+        }
+        .item2{
+            width: 70%;
+            background: #ccc;
+        }
+        .item1, .item2{
+            float: left;
+            padding: 5px 0;
+            text-indent: 10px;
+        }
+        .button{
+            width: 48%;
+            margin: 10px 1% 0;
+            float: left;
+            padding: 10px 0;
+            background: #f3b918;
+            color: #000;
+            border: 0;
+            box-shadow: 0 0 3px #000;
+            font-size: 1.1em;
+            text-align: center;
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .button:hover{
+            background: #F27609;
+        }
+
+        /* Media Query */
+
+        @media screen and (max-width:800px){
+            #wrap{
+                width: 100%;
+            }
+        }
+        @media screen and (max-width:450px){
+            .item1{
+                width: 100%;
+            }
+            .item2{
+                width: 100%;
+                border-bottom: 1px solid #666;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="welcome">
+            <span id="uname">Hi, User1</span>
+            <a href="login.html"><img src="icons/logout.svg" alt="LOGOUT" id="logout"></a>
+        </div>
+        <h1>Contact Book <span id="pgname">- View Contacts</span></h1>
+    </header>
+    <nav id="menu">
+        <a href="index.html" class="menu">
+            <img src="icons/home-yellow.svg" alt="Home" class="menuimg">
+            <span class="menutext">Home</span>
+        </a>
+        <a href="add.html" class="menu">
+            <img src="icons/add-yellow.svg" alt="Home" class="menuimg">
+            <span class="menutext">Add New</span>
+        </a>
+        <a href="all.html" class="menu">
+            <img src="icons/search-yellow.svg" alt="Home" class="menuimg">
+            <span class="menutext">Show All</span>
+        </a>
+        <a href="settings.html" class="menu">
+            <img src="icons/settings-yellow.svg" alt="Home" class="menuimg">
+            <span class="menutext">Settings</span>
+        </a>
+        <a href="login.html" class="menu">
+            <img src="icons/logout-yellow.svg" alt="Home" class="menuimg">
+            <span class="menutext">Logout</span>
+        </a>
+    </nav>
+    <main>
+        <div id="wrap">
+            <div class="row">
+                <h2>Ananda Kumara Karunanayake</h2>
+            </div>
+            <div class="row">
+                <span class="item1">Nick</span>
+                <span class="item2">Karu</span>
+            </div>
+
+            <div class="row">
+                <span class="item1">Email</span>
+                <span class="item2">abc123@gmail.com</span>
+            </div>
+
+            <div class="row">
+                <span class="item1">Mobile No1</span>
+                <span class="item2">0714789541</span>
+            </div>
+
+            <div class="row">
+                <span class="item1">Mobile No2</span>
+                <span class="item2">0765478941</span>
+            </div>
+            <div class="row">
+                <span class="item1">Land No</span>
+                <span class="item2">0115486217</span>
+            </div>
+            <div class="row">
+                <span class="item1">Address</span>
+                <span class="item2">No 123/A Colombo rd, Gampaha </span>
+            </div>
+            <div class="row">
+                <span class="item1">Contact Type</span>
+                <span class="item2">Co-Worker</span>
+            </div>
+            <div class="row">
+                <span class="item1">Gender</span>
+                <span class="item2">Male</span>
+            </div>
+            <div class="row">
+                <span class="item1">Note</span>
+                <span class="item2">Somthing....</span>
+            </div>
+            <div class="row">
+                <a href="edit.html" class="button">Edit</a>
+                <a href="#" class="button">Delete</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
